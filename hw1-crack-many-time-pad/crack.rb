@@ -32,7 +32,6 @@ def algo
         if letters.include?(xor)
           key[i] ||= Hash.new(0)
           key[i][cc1 ^ space] += 1
-          key[i][cc2 ^ space] += 1
         end
       end
     end
