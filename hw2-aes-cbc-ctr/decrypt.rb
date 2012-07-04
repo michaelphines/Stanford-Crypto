@@ -7,12 +7,12 @@ def main(test_cases)
     cipher =
       case test_case["mode"]
       when "cbc"
-        CBC.new(test_case["key"])
+        CBC.new(test_case["key"].hex_to_ascii)
       when "ctr"
-        CTR.new(test_case["key"])
+        CTR.new(test_case["key"].hex_to_ascii)
       else STDERR.puts "Invalid mode: #{test_case.mode}"
       end
-    puts cipher.decrypt(test_case["ciphertext"])
+    puts cipher.decrypt(test_case["ciphertext"].hex_to_ascii)
   end
 end
 
