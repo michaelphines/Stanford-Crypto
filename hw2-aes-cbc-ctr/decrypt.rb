@@ -1,6 +1,6 @@
 require 'yaml'
-require './cbc'
-require './ctr'
+require File.expand_path("../cbc", __FILE__)
+require File.expand_path("../ctr", __FILE__)
 
 def main(test_cases)
   test_cases.each do |test_case|

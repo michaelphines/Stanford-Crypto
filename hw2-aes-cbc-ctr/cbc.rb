@@ -1,6 +1,6 @@
-require 'crypt/stringxor'
-require 'fast-aes'
-require './hex_tools'
+require "crypt/stringxor"
+require "fast-aes"
+require File.expand_path("../../lib/string_extensions", __FILE__)
 
 class CBC
   def initialize(key)
