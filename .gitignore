@@ -1,5 +1,6 @@
 *.gem
 *.rbc
+*.mp4
 .bundle
 .config
 .DS_Store
